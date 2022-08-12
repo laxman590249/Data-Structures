@@ -1,30 +1,9 @@
+from datetime import datetime
+print(datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
 
-
-string = 'zzzzddaaaabcccxxaa'
-
-
-def find_next_char(string, i,count):
-    if string[i]==string[i+1]:
-        return count+1
-    else :
-        return 0
-
-def main(string):
-    char_count={}
-    for i in range(0,len(string)) :
-        count=1
-        next_char = 1
-        for j in range (i,len(string)-1):
-            val=find_next_char(string, i,count)
-            if val==0:
-                next_char = j
-                break
-            else :
-                count=val
-                continue
-        char_count[string[i]] = count
-        i = i + next_char
-    print(char_count)
-
-
-main(string)
+d = [1, 2]
+d2 = [3, 4]
+d3 = d.extend(d2)
+print(d2)
+print(d3)
+print(d)
