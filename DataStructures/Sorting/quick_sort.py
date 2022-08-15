@@ -1,4 +1,15 @@
+"""
+Select a pivot element and put it at its best position.
 
+
+Best: NlogN
+Average: NlogN
+Worst: N^2
+
+Default Not Stable,
+Can make stable
+
+"""
 
 L = [9, 4, 6, 3, 7, 1, 2, 11, 5]
 
@@ -29,6 +40,7 @@ def partition(A, p, q):
 def quick_sort_2(A, p, q):
     if p < q:
         r = partition(A, p, q)
+        # print(r)
         quick_sort_2(A, p, r-1)
         quick_sort_2(A, r+1, q)
 

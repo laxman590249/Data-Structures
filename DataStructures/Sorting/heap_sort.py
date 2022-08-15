@@ -1,3 +1,16 @@
+"""
+Build a max heap from the input data.
+At this point, the maximum element is stored at the root of the heap. Replace it with the last item of the heap
+followed by reducing the size of the heap by 1. Finally, heapify the root of the tree.
+Repeat step 2 while the size of the heap is greater than 1.
+
+Time Complexity: O(N log N)
+Auxiliary Space: O(1)
+Not Stable
+
+"""
+
+
 list_1 = [50, 60, 10, 20, 30, 40]
 
 heap = [0]
