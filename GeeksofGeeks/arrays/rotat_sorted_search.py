@@ -11,4 +11,6 @@ Output : Not found
 Input : arr[] = {30, 40, 50, 10, 20}
         key = 10
 Output : Found at index 3
+
+
 """
