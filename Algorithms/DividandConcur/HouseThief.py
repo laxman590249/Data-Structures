@@ -11,4 +11,4 @@ def max_money(house_worth, index):
     return max(steal_current_house, skip_current_house)
 
 
-print(max_money([6, 7, 1, 30, 18, 2, 4], 0))
+print(max_money([6, 10, 1, 3, 8, 2, 4], 0))

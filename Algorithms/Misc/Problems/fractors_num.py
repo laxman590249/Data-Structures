@@ -1,8 +1,8 @@
 
-n = 330
+n = 660
 l = []
 
-for i in range(1, n//2):
+for i in range(1, n//2+1):
     if n == 1:
         break
     if n % i == 0:
