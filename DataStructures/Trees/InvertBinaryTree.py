@@ -10,7 +10,7 @@ Output: [2,3,1]
 
 Solution:
 
-	Use Queue and do BFS traversal, swap left and right child of every Node.
+	do BFS traversal, swap left and right child of every Node.
 
 """
 

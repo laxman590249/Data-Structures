@@ -1,3 +1,6 @@
+# https://www.youtube.com/watch?v=3tkcfvCNtM8
+
+
 class Node:
 
     def __init__(self, name):

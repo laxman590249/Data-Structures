@@ -22,5 +22,7 @@ Here arr[] is actual array that stores k stacks. Together with k stacks, a stack
 maintained. The top of this stack is stored in a variable ‘free’. All entries in top[] are initialized as -1 to indicate
 that all stacks are empty. All entries next[i] are initialized as i+1 because all slots are free initially and pointing 
 to next slot. Top of free stack, ‘free’ is initialized as 0. 
+
+https://www.youtube.com/watch?v=S5cYO9k1Ja8
 """
 
