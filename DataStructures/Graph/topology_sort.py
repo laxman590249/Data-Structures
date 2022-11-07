@@ -77,13 +77,15 @@ graph = Graph()
 for i in range(1, 9):
     graph.add_vertex('V'+str(i))
 
-graph.add_directed_edge('V1', 'V3')
-graph.add_directed_edge('V2', 'V3')
-graph.add_directed_edge('V3', 'V5')
-graph.add_directed_edge('V5', 'V6')
-graph.add_directed_edge('V5', 'V7')
-graph.add_directed_edge('V7', 'V8')
-graph.add_directed_edge('V2', 'V4')
+graph.add_directed_edge('B', 'A')
+graph.add_directed_edge('B', 'D')
+graph.add_directed_edge('A', 'D')
+graph.add_directed_edge('D', 'C')
+graph.add_directed_edge('D', 'E')
+graph.add_directed_edge('G', 'F')
+graph.add_directed_edge('G', 'D')
+graph.add_directed_edge('F', 'E')
+graph.add_directed_edge('H', 'F')
 # graph.add_directed_edge
 
 graph.topology_sort()

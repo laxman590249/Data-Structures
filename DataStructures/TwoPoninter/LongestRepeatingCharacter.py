@@ -40,6 +40,6 @@ def longest_repeating(string, k):
 
 print(longest_repeating('ABAB', 2))
 print(longest_repeating('AABABBA', 1))
-print(longest_repeating('AABABAAAAABBAAAA', 2))
+print(longest_repeating('AABABAAAAABBAAAA', 1))
 
 

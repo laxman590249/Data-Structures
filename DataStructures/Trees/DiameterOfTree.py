@@ -8,7 +8,7 @@ https://www.geeksforgeeks.org/diameter-of-a-binary-tree-in-on-a-new-method/
 # Simple Python3 program to find diameter
 # of a binary tree.
 
-class newNode:
+class Node:
 	def __init__(self, data):
 		self.data = data
 		self.left = self.right = None

@@ -22,4 +22,4 @@ class Solution:
         heights.pop()
         return ans
 
-print(Solution().largestRectangleArea([2, 1, 5, 6, 3, 4, 1]))
+print(Solution().largestRectangleArea([1,8,6,2,5,4,8,3,7]))

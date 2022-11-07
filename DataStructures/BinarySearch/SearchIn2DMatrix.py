@@ -1,5 +1,6 @@
 """
-Write an efficient algorithm that searches for a value target in an m x n integer matrix matrix. This matrix has the following properties:
+Write an efficient algorithm that searches for a value target in an m x n integer matrix matrix.
+This matrix has the following properties:
 
 Integers in each row are sorted from left to right.
 The first integer of each row is greater than the last integer of the previous row.
@@ -28,8 +29,8 @@ res_y = -1
 
 while left <= right:
     mid = left + (right-left)//2
-    x = mid//n
-    y = mid%n
+    x = mid // n
+    y = mid % n
     print(mid, left, right)
     if matrix[x][y] == target:
         res_x = x
