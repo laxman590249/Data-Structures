@@ -28,7 +28,8 @@ class Graph:
                     for j in range(self.V):
                         if j != k:
                             self.graph[i][j] = min(self.graph[i][j], self.graph[i][k] + self.graph[k][j])
-        print(self.graph)
+            print(self.graph)
+        # print(self.graph)
 
 
 graph = Graph(4)

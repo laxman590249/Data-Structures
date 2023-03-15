@@ -22,8 +22,10 @@ class Solution(object):
                     memo[i][j] = memo[i + 1][j + 1] + 1
                     if memo[i][j] > current_max:
                         current_max = memo[i][j]
+        for m in memo:
+            print(m)
         return current_max
 
 
-print(Solution().findLength([0,0,0,0,0], [0,0,0,0,0]))
+# print(Solution().findLength([0,0,0,0,0], [0,0,0,0,0]))
 print(Solution().findLength([1,2,3,2,1], [3,2,1,4,7]))

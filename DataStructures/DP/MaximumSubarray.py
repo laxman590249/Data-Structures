@@ -22,7 +22,7 @@ Solution:
 
 https://leetcode.com/problems/maximum-subarray/discuss/20193/DP-solution-and-some-thoughts
 
-We will create a DP array and everytime we will iterate trhough the array we will update the current
+We will create a DP array and everytime we will iterate through the array we will update the current
 value of DP array. If previous value of DP array is positive then we will add it with current otherwise we will not add
 it into the DP array
 
@@ -39,6 +39,7 @@ class Solution:
         for i in range(1, len(nums)):
             dp[i] = nums[i] + (dp[i-1] if dp[i-1] >= 0 else 0)
             max_value = max(max_value, dp[i])
+        print(dp)
         print(max_value)
         return max_value
 

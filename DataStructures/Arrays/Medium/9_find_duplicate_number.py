@@ -32,22 +32,6 @@ complexity n Log n
 
 """
 
-# # If same number is getting repeacted and alll numbers are present from 1 to N
-# class Solution:
-#     def findDuplicate(self, nums: list) -> int:
-#         n = len(nums)-1
-#         frequency = 1
-#         expected_sum = int(n * ((n+1)/2))
-#         real_sum = sum(nums)
-#         number = real_sum - expected_sum
-#         while expected_sum != (real_sum - number) or number == 0:
-#             n -= 1
-#             frequency += 1
-#             expected_sum = int(n * ((n+1)/2))
-#             number = real_sum - expected_sum
-#         return number//frequency
-
-
 class Solution:
     def findDuplicate(self, nums: list) -> int:
         low = 1
@@ -65,4 +49,4 @@ class Solution:
 
         return duplicate
 
-print(Solution().findDuplicate([3,1,5,2,4,5]))
+print(Solution().findDuplicate([3, 3, 3, 2, 4]))

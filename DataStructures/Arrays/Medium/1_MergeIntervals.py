@@ -13,8 +13,6 @@ use here another list and use last element in the list to copmare the things
 """
 list_obj = [[1, 2], [0, 3], [4, 5], [6, 7]]
 
-list_obj = []
-
 list_result = sorted(list_obj, key=lambda i: i[0])
 if len(list_result):
     prev = list_result[0]

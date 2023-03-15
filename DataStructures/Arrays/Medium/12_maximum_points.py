@@ -27,14 +27,16 @@ Above can be done by creaing two extra list
 # Below
 class Solution:
     def maxScore(self, cardPoints: list, k: int) -> int:
-
         def get_max(cardPoints, i, j, k):
-            if k == 1 or i > j:
+            if k == 1 or i >= j:
                 return max(cardPoints[i], cardPoints[j])
-            left_max = get_max(cardPoints, i+1, j, k-1) + cardPoints[i]
-            right_max = get_max(cardPoints, i, j-1, k - 1) + cardPoints[j]
+            left_max = get_max(cardPoints, i + 1, j, k - 1) + cardPoints[i]
+            right_max = get_max(cardPoints, i, j - 1, k - 1) + cardPoints[j]
             return max(left_max, right_max)
-        return get_max(cardPoints, 0, len(cardPoints)-1, k)
+
+        if len(cardPoints) == k:
+            return sum(cardPoints)
+        return get_max(cardPoints, 0, len(cardPoints) - 1, k)
 
 # print(Solution().maxScore([30,88,33,37,18,77,54,73,31,88,93,25,18,31,71,8,97,20,98,16,65,40,18,25,13,51,59], 26))
 

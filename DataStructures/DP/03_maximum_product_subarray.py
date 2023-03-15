@@ -16,7 +16,7 @@ Explanation: [2,3] has the largest product 6.
 """
 
 class Solution:
-    def maxProduct(self, nums: List[int]) -> int:
+    def maxProduct(self, nums: list) -> int:
         if len(nums) == 0:
             return 0
 
@@ -34,3 +34,6 @@ class Solution:
             result = max(max_so_far, result)
 
         return result
+
+
+print(Solution().maxProduct([1, 2, -1, 5, 8, 10, -20]))

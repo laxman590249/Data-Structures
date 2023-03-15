@@ -14,4 +14,5 @@ def longestArithSeqLength( A):
 
 
 print(longestArithSeqLength([3,6,9,12]))
-print(longestArithSeqLength([20,1,15,3,10,5,8]))
+# print(longestArithSeqLength([9,4,7,2,10]))
+# print(longestArithSeqLength([20,1,15,3,10,5,8]))

@@ -24,4 +24,4 @@ class Solution:
         return False
 
 
-print(Solution().checkSubarraySum([5,2,4,6,1], 6))
+print(Solution().checkSubarraySum([5,2,4,6,1], 8))

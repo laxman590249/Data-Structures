@@ -10,30 +10,23 @@ Output: 2
 
 Approach 1:
 
-Cumulative array
+Prefix sum, Linear Approach
+
 
 """
+nums = [1, -1, 1, 1, 1, 1]
 
-nums = [1,1,1],
-k = 2
-count = 0
-sum_array = [0]
-for i in range(len(nums)+2):
-    sum_array.append(0)
-print(sum_array)
-i = 1
-while i < len(sum_array):
-    print(i)
-    sum_array[i] = sum_array[i-1] + sum_array[i-1]
-    i += 1
-start = 0
-end = 0
-while start < len(sum_array):
-    end = start + 1
-    while end < len(sum_array):
-        if sum_array[end] - sum_array[start] == k:
-            count += 1
-        end += 1
-    start += 1
+class Solution:
 
-print(count)
+    def find_subarrays_count(self, nums, k):
+        prefix_sum = { 0: 1}
+        total_sum = 0
+        result = 0
+        for num in nums:
+            total_sum += num
+            prefix = total_sum - k
+            result += prefix_sum.get(prefix, 0)
+            prefix_sum[total_sum] = prefix_sum.get(total_sum, 0) + 1
+        return result
+
+print(Solution().find_subarrays_count([1, -1, 1, 1, 1, 1], k=3))

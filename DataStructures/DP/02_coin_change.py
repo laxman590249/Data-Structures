@@ -12,7 +12,9 @@ class Solution:
         for coin in coins:
             for i in range(coin, amount+1):
                 dp[i] = min(dp[i], dp[i-coin]) + 1
+            print(dp)
+
         return -1 if dp[amount] == float('inf') else dp[amount]
 
-print(Solution().coinChange_2([4, 5], 11))
+print(Solution().coinChange_2([2, 5], 11))
 
