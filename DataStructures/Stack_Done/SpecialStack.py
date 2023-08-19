@@ -31,14 +31,6 @@ Approach 1:
     (4, 3)
     (3, 3) 
     
-3. Store the elements with some mathematics 
-    
-    Push: element * dummy_value +  minimum_valuye = stored_value
-    pop: stored_value/ dummy_value
-    min: stored_value % dummy_value
-    
-    > This will fail if we have a element to be stored greater then dummy value or equal to dummy_value
-
 """
 
 """

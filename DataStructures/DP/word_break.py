@@ -28,7 +28,7 @@ class Solution:
                     dp[i] = True
                     break
 
-
+        print(dp)
         return dp[0]
 
 print(Solution().wordBreak("leetcode",  ["leet","code"]))

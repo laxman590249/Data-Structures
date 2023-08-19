@@ -1,0 +1,24 @@
+A priority queue and a heap are related concepts in computer science, but they are not the same thing.
+A heap is a data structure that can be used to implement a priority queue, which is an abstract concept.
+
+Here's the difference between a priority queue and a heap:
+
+**Priority Queue:**
+A priority queue is an abstract data type that stores a collection of elements, each with an associated priority.
+Elements in a priority queue can be inserted and removed, and the element with the highest (or lowest) priority is always at the front and can be efficiently accessed.
+Priority queues do not dictate the specific implementation; they describe the behavior and operations that should be supported.
+
+**Heap:**
+A heap is a specific implementation of a priority queue.
+It is a binary tree-based data structure that satisfies the heap property: for a min-heap, each parent node has a value less than or equal to its child nodes,
+and for a max-heap, each parent node has a value greater than or equal to its child nodes.
+Heaps are particularly efficient for insertion and removal of the highest (or lowest) priority element because they maintain the heap property as elements are added or removed.
+
+In summary:
+
+- A priority queue is an abstract concept that defines the behavior of elements with priorities and the operations that can be performed on them.
+- A heap is a concrete data structure that implements a priority queue. It is based on a binary tree structure with the heap property.
+
+It's important to note that there are different types of heaps, such as binary heaps, Fibonacci heaps, and more, each with its own characteristics and
+performance trade-offs. While heaps are a common implementation of priority queues, other data structures could also be used to implement priority queues,
+like self-balancing binary search trees.

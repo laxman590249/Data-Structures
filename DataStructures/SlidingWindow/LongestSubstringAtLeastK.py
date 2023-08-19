@@ -17,20 +17,3 @@ https://leetcode.com/problems/longest-substring-with-at-least-k-repeating-charac
 
 """
 import collections
-
-
-def count_longest(string, k):
-    count = collections.Counter(string)
-    start = 0
-    max_count = 0
-    for end, char in enumerate(string):
-        if count.get(char) < k:
-            max_count = max(max_count, end-start)
-            start = end+1
-    max_count = max(max_count, end - start + 1)
-    return max_count
-
-print(count_longest('bacbcbcbcbcabacbcbcbcbc', 3))
-print(count_longest('aaabb', 3))
-
-print(count_longest('ababacb', 3))

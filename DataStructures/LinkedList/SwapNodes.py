@@ -30,25 +30,45 @@ N3.next = N4
 N4.next = N5
 N5.next = N6
 
-def swap_nodes(head, x, y):
-    a_node = None
-    b_node = None
-    while head.next and ( not a_node or not b_node):
 
-        if head.next.data == x:
-            a_node = head
-        elif head.next.data == y:
-            b_node = head
+def swap_nodes(head_ref, x, y):
+    head = head_ref
 
-        head = head.next
-    temp = a_node.next.next
-    a_node.next.next = b_node.next.next
-    b_node.next.next = temp
-    a_node.next, b_node.next = b_node.next, a_node.next
+    # Nothing to do if x and y are same
+    if (x == y):
+        return None
 
-swap_nodes(N1, 1, 6)
+    a = None
+    b = None
 
-head = N1
+    # search for x and y in the linked list
+    # and store their pointer in a and b
+    while (head_ref.next != None):
+
+        if ((head_ref.next).data == x):
+            a = head_ref
+
+        elif ((head_ref.next).data == y):
+            b = head_ref
+
+        head_ref = ((head_ref).next)
+
+    # if we have found both a and b
+    # in the linked list swap current
+    # pointer and next pointer of these
+    if (a != None and b != None):
+        temp = a.next
+        a.next = b.next
+        b.next = temp
+        temp = a.next.next
+        a.next.next = b.next.next
+        b.next.next = temp
+
+    return head
+
+head = swap_nodes(N1, 6, 1)
+
+# head = N1
 while head:
     print(head.data)
     head = head.next
