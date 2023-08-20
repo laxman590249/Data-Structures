@@ -5,40 +5,32 @@ return the number of negative numbers in grid.
 Input: grid = [[4,3,2,-1],[3,2,1,-1],[1,1,-1,-2],[-1,-1,-2,-3]]
 Output: 8
 
-Start from the top right corner
+1. Start from the top right corner
 count the negative numbers in each columns
 
+2. Do Binary Search in each row, find the last negative and find the count of the negative
 
 """
 
-grid = [[5, -1, -1, -1],
-        [-1, 2, -1, -1],
-        [1, -1, -2, -2],
-        [-1, -1, -2, -3]]
 
-count = 0
-m = len(grid)-1
-n = len(grid[0])-1
+class Solution:
+    def countNegatives(self, grid):
+        m, n = len(grid), len(grid[0])
+        count = 0
 
-i = 0
-j = n
+        for row in grid:
+            left, right = 0, n - 1
+            while left <= right:
+                mid = left + (right - left) // 2
+                if row[mid] < 0:
+                    right = mid - 1
+                else:
+                    left = mid + 1
+            count += n - left  # Add the count of negative numbers in the row
 
-while j != -1 and i != m:
-    if grid[i][j] >= 0:
-        i += 1
-    else:
-        # print(i, j)
-        if j == 0:
-            count += (m - i + 1)
-            j -= 1
-        elif grid[i][j-1] >= 0:
-            count += (m - i + 1)
-            i += 1
-            j -= 1
-        else:
-            count += (m - i + 1)
-            j -= 1
+        return count
 
-print(count)
+
+
 
 
