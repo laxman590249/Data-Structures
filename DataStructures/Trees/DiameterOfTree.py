@@ -44,11 +44,11 @@ def diameter(root):
 
 # Driver code
 if __name__ == '__main__':
-	root = newNode(1)
-	root.left = newNode(2)
-	root.right = newNode(3)
-	root.left.left = newNode(4)
-	root.left.right = newNode(5)
+	root = Node(1)
+	root.left = Node(2)
+	root.right = Node(3)
+	root.left.left = Node(4)
+	root.left.right = Node(5)
 
 	print("Diameter is", diameter(root))
 

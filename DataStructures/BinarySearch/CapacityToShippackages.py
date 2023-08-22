@@ -41,19 +41,29 @@ Finally, when our left == right, we reach our answer
 weights = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 days = 5
 
-def shipWithinDays(weights, D):
+
+def shipWithinDays(weights, days):
+    def is_feasible(capacity):
+        days_needed, current_load = 1, 0
+
+        for weight in weights:
+            if current_load + weight > capacity:
+                days_needed += 1
+                current_load = 0
+            current_load += weight
+
+        return days_needed <= days
+
     left, right = max(weights), sum(weights)
+
     while left < right:
-        mid, need, cur = (left + right) / 2, 1, 0
-        for w in weights:
-            if cur + w > mid:
-                need += 1
-                cur = 0
-            cur += w
-        if need > D:
-            left = mid + 1
-        else:
+        mid = left + (right - left) // 2
+
+        if is_feasible(mid):
             right = mid
+        else:
+            left = mid + 1
+
     return left
 
 print(shipWithinDays(weights, days))

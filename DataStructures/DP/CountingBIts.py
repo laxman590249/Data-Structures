@@ -12,7 +12,7 @@ Explanation:
 
 Solution:
 
-In this we assume that all i%2 == 0 have the same number of one's in i/3
+In this we assume that all i%2 == 0 have the same number of one's in i/2
 ex -- 4,2 have the same number of one's
 if i==6 i/2 6/2 == 3
 number of one's for six and three are equals

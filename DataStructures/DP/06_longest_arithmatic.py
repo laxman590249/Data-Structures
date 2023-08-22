@@ -13,6 +13,6 @@ def longestArithSeqLength( A):
     return max(dp.values())
 
 
-print(longestArithSeqLength([3,6,9,12]))
+print(longestArithSeqLength([10,9,2,5,3,7,101,18]))
 # print(longestArithSeqLength([9,4,7,2,10]))
 # print(longestArithSeqLength([20,1,15,3,10,5,8]))

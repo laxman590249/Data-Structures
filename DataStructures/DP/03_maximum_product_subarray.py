@@ -32,8 +32,9 @@ class Solution:
             max_so_far = temp_max
 
             result = max(max_so_far, result)
+            print(max_so_far, min_so_far)
 
         return result
 
 
-print(Solution().maxProduct([1, 2, -1, 5, 8, 10, -20]))
+print(Solution().maxProduct([2, 3, -2, 4]))

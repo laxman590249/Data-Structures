@@ -14,22 +14,23 @@ Explanation: Return true because "leetcode" can be segmented as "leet code".
 
 """
 
+
 class Solution:
     def wordBreak(self, s: str, wordDict: list) -> bool:
-        wordSet = set(wordDict)
+        word_set = set(wordDict)
         n = len(s)
 
+        # dp[i] indicates whether the prefix s[:i] can be segmented into words
         dp = [False] * (n + 1)
-        dp[n] = True
-        for i in range(n - 1, -1, -1):
-            for j in range(i + 1, n + 1):
-                # print(s[i:j], dp)
-                if dp[j] and s[i:j] in wordSet:
+        dp[0] = True
+
+        for i in range(1, n + 1):
+            for j in range(i):
+                if dp[j] and s[j:i] in word_set:
                     dp[i] = True
                     break
 
-        print(dp)
-        return dp[0]
+        return dp[n]
 
 print(Solution().wordBreak("leetcode",  ["leet","code"]))
 print(Solution().wordBreak("applepenapple",  ["apple","pen"]))

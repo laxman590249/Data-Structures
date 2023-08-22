@@ -58,3 +58,35 @@ where result = left = right.
 
 """
 
+"""
+The is_feasible function checks if it's possible to achieve the maximum penalty less than or equal to the given value.
+We use binary search to find the minimum possible penalty.
+The search range is initially set from 1 to the maximum number of balls in any bag.
+We iteratively adjust the search range by checking if the current mid penalty is feasible. 
+If it is, we update the upper bound of the range; otherwise, we update the lower bound.
+
+The binary search continues until the search range is narrowed down to a single value, which will be the minimum possible penalty.
+
+"""
+
+
+class Solution:
+    def minimumSize(self, nums, maxOperations):
+        def is_feasible(max_penalty):
+            operations_needed = 0
+            for balls in nums:
+                operations_needed += (balls - 1) // max_penalty
+            return operations_needed <= maxOperations
+
+        left, right = 1, max(nums)
+
+        while left < right:
+            mid = left + (right - left) // 2
+
+            if is_feasible(mid):
+                right = mid
+            else:
+                left = mid + 1
+
+        return left
+
