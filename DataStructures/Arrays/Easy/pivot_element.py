@@ -1,4 +1,6 @@
 """
+724. Find Pivot Index
+
 Given an array of integers nums, calculate the pivot index of this array.
 
 The pivot index is the index where the sum of all the numbers strictly to the left of the index is equal to the sum of all the numbers strictly to the index's right.
@@ -10,7 +12,7 @@ Return the leftmost pivot index. If no such index exists, return -1.
 """
 
 
-nums = [1,7,3,6,5,6]
+nums = [1, 7, 3, 6, 5, 6]
 
 
 class Solution:

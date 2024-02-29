@@ -37,4 +37,4 @@ class Solution:
         return result
 
 
-print(Solution().maxProduct([2, 3, -2, 4]))
+print(Solution().maxProduct([1, 1, -2, 4, -3, 6, 10, -10]))

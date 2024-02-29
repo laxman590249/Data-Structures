@@ -16,6 +16,11 @@ Example 2:
 
 Input: s = "cbbd"
 Output: "bb"
+
+
+Solution:
+
+https://www.youtube.com/watch?v=XYQecbcd6_c
 """
 class Solution:
     def longestPalindrome(self, s: str) -> str:

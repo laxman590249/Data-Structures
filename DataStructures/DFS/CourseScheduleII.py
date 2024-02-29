@@ -27,7 +27,7 @@ Create TOPOStack
 
 """
 numCourses = 4
-prerequisites = [[1,0],[2,0],[3,1],[3,2]]
+prerequisites = [[1, 0], [2, 0], [3, 1], [3, 2]]
 visited_list = [False] * numCourses
 temp_Stack = []
 dfs_stack = []
@@ -38,7 +38,7 @@ for i in range(numCourses):
 
 for pre in prerequisites:
     graph[pre[1]].append(pre[0])
-
+print(graph)
 i = 0
 while i < numCourses:
     if not visited_list[i]:
